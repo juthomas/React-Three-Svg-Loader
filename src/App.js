@@ -26,13 +26,11 @@ function SvgRender({ url, position, scale }) {
   )
 
   return (
-    <>
-      <group position={position} rotation={[0, 0, Math.PI]} scale={scale}>
-        {shapes.map((item) => {
-          return <Shape {...item} rotation={[0, 0, 0]} position={[0, 0, 0]} opacity={1} />
-        })}
-      </group>
-    </>
+    <group position={position} rotation={[0, 0, Math.PI]} scale={scale}>
+      {shapes.map((item) => {
+        return <Shape {...item} rotation={[0, 0, 0]} position={[0, 0, 0]} opacity={1} />
+      })}
+    </group>
   )
 }
 
